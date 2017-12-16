@@ -1,0 +1,38 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-size: 16px;
+	font-family: Tahoma, Arial, sans-serif;
+}
+.container {
+	width: 970px;
+	margin: 0 auto;
+}
+h1 {
+	font-size: 3rem;
+	text-align: center;
+}
+h1 .fa {
+	font-size: 2rem;
+	vertical-align: middle;
+}
+h2 {
+	font-size: 2rem;
+}
+section.main {
+	padding: 2rem 1rem;
+}
+.projects {
+	list-style-position: inside;
+}
+.projects h2 {
+	margin-top: 4rem;
+	margin-bottom: 2rem;
+}
+.projects li {
+	margin-bottom: 1rem;
+}
