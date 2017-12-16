@@ -3,13 +3,16 @@
 	padding: 0;
 	box-sizing: border-box;
 }
-
+html {
+	height: 100%;
+}
 body {
 	font-size: 16px;
-	font-family: Tahoma, Arial, sans-serif;
+	font-family: 'Oxygen', Tahoma, sans-serif;
+	color: #444;
 }
 .container {
-	width: 970px;
+	width: 640px;
 	margin: 0 auto;
 }
 h1 {
@@ -23,16 +26,36 @@ h1 .fa {
 h2 {
 	font-size: 2rem;
 }
+a {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+header div > span {
+	display: block;
+	text-align: center;
+	padding: 1rem 0;
+}
 section.main {
 	padding: 2rem 1rem;
+}
+header {
+	padding: 2rem;
+}
+hr {
+	border: none;
+	height: 1px;
+  background-color: #999;
+	margin: 0 auto;
+	background-image: -webkit-linear-gradient(0deg, #fff, #999, #fff);
 }
 .projects {
 	list-style-position: inside;
 }
 .projects h2 {
-	margin-top: 4rem;
 	margin-bottom: 2rem;
 }
 .projects li {
-	margin-bottom: 1rem;
+	margin-bottom: .8rem;
 }
