@@ -1,68 +1,57 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box; }
-
-html {
+.Page {
   font-size: 16px;
   font-family: 'Oxygen', Tahoma, sans-serif;
-  height: 100%; }
-
-body {
   color: #444; }
 
-.container {
+.Page-container {
   width: 640px;
   margin: 0 auto; }
 
-h1 {
-  font-size: 3rem;
-  text-align: center; }
-
-h1 .fa {
-  font-size: 2rem;
-  vertical-align: middle; }
-
-h2 {
-  font-size: 2rem;
-  text-align: center; }
-
-a {
-  text-decoration: none; }
-
-a:hover {
-  text-decoration: underline; }
-
-header div > span {
-  display: block;
-  text-align: center;
-  padding: 1rem 0; }
-
-section.main {
-  padding: 2rem 1rem; }
-
-header {
+.Header {
   padding: 2rem;
   background-image: url();
   height: 100vh; }
 
-header h1 {
+.Header-Title {
+  font-size: 3rem;
+  text-align: center;
   margin-top: calc(50vh - 7rem); }
 
-hr {
+.Header-Title .fa {
+  font-size: 2rem;
+  vertical-align: middle; }
+
+.Header-Subtitle {
+  display: block;
+  text-align: center;
+  padding: 1rem 0; }
+
+.Header-LineBottom {
   border: none;
   height: 1px;
   background-color: #999;
   margin: 0 auto;
   background-image: -webkit-linear-gradient(0deg, #fff, #999, #fff); }
 
-.projects {
+.Main {
+  padding: 2rem 1rem; }
+
+.Projects {
   list-style-position: inside; }
 
-.projects h2 {
+.Projects-Title {
+  font-size: 2rem;
+  text-align: center;
   margin-bottom: 2rem; }
 
-.projects li {
-  margin-bottom: .8rem; }
+.Projects-List {
+  margin-bottom: .8rem;
+  text-decoration: none; }
+
+.Projects-List a {
+  text-decoration: none; }
+
+.Projects-List a:hover {
+  text-decoration: underline; }
 
 /*# sourceMappingURL=index.css.map */
