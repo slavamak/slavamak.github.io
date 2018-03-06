@@ -1,0 +1,19 @@
+/* Styles for Tablet and Desktop devices */
+
+@media screen and (min-width: 740px) {
+	.Page-container {
+		width: 640px;
+		margin: 0 auto;
+	}
+	.Header-Title .fa {
+		display: inline-block;
+		font-size: 2rem;
+		vertical-align: middle;
+	}
+}
+@media screen and (min-width: 406px) {
+	.Header {
+		padding: 2rem;
+		height: 100vh;
+	}
+}
