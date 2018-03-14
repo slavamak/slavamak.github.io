@@ -1,63 +1,63 @@
 div, section, header, main, footer, ul {
 	box-sizing: border-box;
 }
-.Page {
+.page {
 	font-size: 16px;
 	font-family: 'Fira mono', monospace, Tahoma, sans-serif;
 	color: #444;
 }
-.Page-container {
+.page-container {
 	width: 100%;
 }
-.Header {
+.header {
 	padding: 2rem 0;
 	height: 100vh;
 }
-.Header-Title {
+.header-title {
 	font-size: 3rem;
 	text-align: center;
 	margin-top: calc(50vh - 7rem);
 	margin-bottom: 0;
 }
-.Header-Title .fa {
+.header-title .fa {
 	display: none;
 }
-.Header-Subtitle {
+.header-subtitle {
 	display: block;
 	text-align: center;
 	padding: 1rem 0;
 }
-.Header-LineBottom {
+.header-lineBottom {
 	border: none;
 	height: 1px;
 	background-color: #999;
 	margin: 0 auto;
 	background-image: -webkit-linear-gradient(0deg, #fff, #999, #fff);
 }
-.Main {
+.main {
 	padding: 2rem 1rem;
 }
-.Projects {
+.projects {
 	list-style-position: inside;
 	margin: 0;
 	padding: 0;
 }
-.Projects-Title {
+.projects-Title {
 	font-size: 2rem;
 	text-align: center;
 	margin: 0 0 2rem;
 }
-.Projects-List {
+.projects-list {
 	margin-bottom: .8rem;
 	text-decoration: none;
 }
-.Projects-List a {
+.projects-list a {
 	text-decoration: none;
 }
-.Projects-List a:hover {
+.projects-list a:hover {
 	text-decoration: underline;
 }
-.Footer {
+.footer {
 	text-align: center;
 }
 
