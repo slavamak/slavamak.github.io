@@ -1,10 +1,18 @@
 div, section, header, main, footer, ul {
   box-sizing: border-box; }
 
+a {
+  text-decoration: none; }
+
+a:hover {
+  text-decoration: underline; }
+
 .page {
   font-size: 16px;
   font-family: 'Fira mono', monospace, Tahoma, sans-serif;
-  color: #444; }
+  color: #444;
+  margin: 0;
+  padding: 0; }
 
 .page-container {
   width: 100%; }
@@ -37,30 +45,41 @@ div, section, header, main, footer, ul {
 .main {
   padding: 2rem 1rem; }
 
+.PersonalProjects {
+  padding: 2rem 0; }
+
+.projects-list-wrap {
+  display: inline-block;
+  margin: 0.5rem; }
+
 .projects {
   list-style-position: inside;
   margin: 0;
-  padding: 0;
-  height: 100vh; }
+  padding: 2rem 0;
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-content: flex-start; }
 
-.projects-Title {
+.projects-title {
   font-size: 2rem;
   text-align: center;
-  margin: 0 0 2rem; }
+  margin: 2rem 0; }
 
 .projects-list {
   display: inline-block;
   width: 288px;
   height: 176px;
-  margin-bottom: .8rem;
   text-decoration: none;
   position: relative;
-  padding: 0.5rem;
-  border-radius: 4px;
   text-align: center;
   box-sizing: border-box;
+  border-radius: 6px;
   overflow: hidden;
-  z-index: 1; }
+  z-index: 1;
+  background-size: cover;
+  background-position: center; }
 
 .projects-list:before {
   content: '';
@@ -70,14 +89,15 @@ div, section, header, main, footer, ul {
   position: absolute;
   top: 0;
   left: 0;
-  opacity: 0.8;
+  opacity: 0.7;
   background-color: #000;
   z-index: -1; }
 
 .project-item1 {
-  background-image: url(../img/project-img1.png);
-  background-size: cover;
-  background-position: center; }
+  background-image: url(../img/project-img1.jpg); }
+
+.project-item2 {
+  background-image: url(../img/project-img2.jpg); }
 
 .projects-list a {
   text-decoration: none;
@@ -85,22 +105,48 @@ div, section, header, main, footer, ul {
   width: 100%;
   height: 100%;
   color: #fff;
+  line-height: 176px; }
+
+.projects-list img {
+  vertical-align: middle;
+  width: 126px;
   transition: 0.2s ease-in-out; }
 
-.projects-list p {
-  margin: 0;
-  padding: 2rem 0 0; }
+.projects-list a:hover img {
+  transform: scale(1.1); }
 
-.projects-list a:hover {
-  color: #ccc; }
+.projects-list-text {
+  width: 288px;
+  text-align: center;
+  color: #555;
+  font-size: 0.875rem;
+  margin-left: 0.875rem 0; }
 
 .footer {
-  text-align: center; }
+  text-align: center;
+  padding: 2rem 0;
+  background-color: #333;
+  color: #ccc;
+  font-size: 0.875rem; }
+
+.Copyright {
+  margin: 1rem 0 2rem 0; }
+
+.Social {
+  display: inline-block;
+  width: 24px;
+  height: 24px; }
+
+.Social svg {
+  transition: 0.2s ease-in-out; }
+
+.Social:hover svg {
+  fill: #ccc; }
 
 /* Styles for Tablet and Desktop devices */
 @media screen and (min-width: 740px) {
   .page-container {
-    width: 640px;
+    max-width: 970px;
     margin: 0 auto; }
 
   .header-title .fa {
