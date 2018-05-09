@@ -1,31 +1,58 @@
 div, section, header, main, footer, ul {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
 a {
   text-decoration: none; }
 
+a:link {
+  color: #bb755b; }
+
+a:visited {
+  color: #3F51B5; }
+
 a:hover {
   text-decoration: underline; }
+
+a:active {
+  color: #E91E63; }
 
 .page {
   font-size: 16px;
   font-family: 'Fira mono', monospace, Tahoma, sans-serif;
-  color: #444;
+  color: #795548;
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  height: 100vh;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background-image: -webkit-radial-gradient(circle, #f2e192, #f0d763);
+  background-image: -o-radial-gradient(circle, #f2e192, #f0d763);
+  background-image: radial-gradient(circle, #f2e192, #f0d763);
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat; }
 
 .page-container {
   width: 100%; }
 
 .header {
-  padding: 2rem 0;
-  height: 100vh; }
+  padding: 2rem 0; }
 
 .header-title {
   font-size: 3rem;
-  text-align: center;
-  margin-top: calc(50vh - 7rem);
-  margin-bottom: 0; }
+  text-align: center; }
 
 .header-title .fa {
   display: none; }
@@ -38,99 +65,19 @@ a:hover {
 .header-lineBottom {
   border: none;
   height: 1px;
-  background-color: #999;
   margin: 0 auto;
-  background-image: -webkit-linear-gradient(0deg, #fff, #999, #fff); }
-
-.main {
-  padding: 2rem 1rem; }
-
-.PersonalProjects {
-  padding: 2rem 0; }
-
-.projects-list-wrap {
-  display: inline-block;
-  margin: 0.5rem; }
-
-.projects {
-  list-style-position: inside;
-  margin: 0;
-  padding: 2rem 0;
-  text-align: center;
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  align-content: flex-start; }
-
-.projects-title {
-  font-size: 2rem;
-  text-align: center;
-  margin: 2rem 0; }
-
-.projects-list {
-  display: inline-block;
-  width: 288px;
-  height: 176px;
-  text-decoration: none;
-  position: relative;
-  text-align: center;
-  box-sizing: border-box;
-  border-radius: 6px;
-  overflow: hidden;
-  z-index: 1;
-  background-size: cover;
-  background-position: center; }
-
-.projects-list:before {
-  content: '';
-  display: block;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 0.7;
-  background-color: #000;
-  z-index: -1; }
-
-.project-item1 {
-  background-image: url(../img/project-img1.jpg); }
-
-.project-item2 {
-  background-image: url(../img/project-img2.jpg); }
-
-.projects-list a {
-  text-decoration: none;
-  display: block;
-  width: 100%;
-  height: 100%;
-  color: #fff;
-  line-height: 176px; }
-
-.projects-list img {
-  vertical-align: middle;
-  width: 126px;
-  transition: 0.2s ease-in-out; }
-
-.projects-list a:hover img {
-  transform: scale(1.1); }
-
-.projects-list-text {
-  width: 288px;
-  text-align: center;
-  color: #555;
-  font-size: 0.875rem;
-  margin-left: 0.875rem 0; }
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0)), color-stop(#795548), to(rgba(0, 0, 0, 0)));
+  background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0), #795548, rgba(0, 0, 0, 0));
+  background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0), #795548, rgba(0, 0, 0, 0));
+  background-image: linear-gradient(90deg, rgba(0, 0, 0, 0), #795548, rgba(0, 0, 0, 0)); }
 
 .footer {
   text-align: center;
   padding: 2rem 0;
-  background-color: #333;
-  color: #ccc;
   font-size: 0.875rem; }
 
 .Copyright {
-  margin: 1rem 0 2rem 0; }
+  margin-bottom: 0; }
 
 .Social {
   display: inline-block;
@@ -138,10 +85,13 @@ a:hover {
   height: 24px; }
 
 .Social svg {
+  fill: #795548;
+  -webkit-transition: 0.2s ease-in-out;
+  -o-transition: 0.2s ease-in-out;
   transition: 0.2s ease-in-out; }
 
 .Social:hover svg {
-  fill: #ccc; }
+  fill: #9e7465; }
 
 /* Styles for Tablet and Desktop devices */
 @media screen and (min-width: 740px) {
@@ -155,7 +105,6 @@ a:hover {
     vertical-align: middle; } }
 @media screen and (min-width: 406px) {
   .header {
-    padding: 2rem;
-    height: 100vh; } }
+    padding: 2rem; } }
 
 /*# sourceMappingURL=index.css.map */
