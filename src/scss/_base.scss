@@ -2,6 +2,25 @@ div, section, header, main, footer, ul {
 	-webkit-box-sizing: border-box;
 	        box-sizing: border-box;
 }
+@font-face{
+	font-family: 'Fira Mono';
+	src: local("Fira Mono"),
+			 url("../fonts/FiraMono-Regular.woff2") format("woff2"),
+			 url("../fonts/FiraMono-Regular.woff") format("woff"),
+			 url("../fonts/FiraMono-Regular.ttf") format("truetype");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face{
+	font-family: 'Fira Mono';
+	src: local("Fira Mono Bold"),
+			 url("../fonts/FiraMono-Bold.woff2") format("woff2"),
+			 url("../fonts/FiraMono-Bold.woff") format("woff"),
+			 url("../fonts/FiraMono-Bold.ttf") format("truetype");
+	font-weight: bold;
+	font-style: normal;
+}
 a {
 	text-decoration: none;
 }
@@ -19,7 +38,7 @@ a:active {
 }
 .page {
 	font-size: 16px;
-	font-family: 'Fira mono', monospace, Tahoma, sans-serif;
+	font-family: 'Fira Mono', 'Trebuchet MS', Tahoma, sans-serif;
 	color: #795548;
 	margin: 0;
 	padding: 0;
@@ -38,11 +57,14 @@ a:active {
 	    -ms-flex-pack: center;
 	        justify-content: center;
 	background-image: -webkit-radial-gradient(circle, #f2e192, #f0d763);
+	background-image: -moz-radial-gradient(circle, #f2e192, #f0d763);
 	background-image: -o-radial-gradient(circle, #f2e192, #f0d763);
 	background-image: radial-gradient(circle, #f2e192, #f0d763);
 	-webkit-background-size: cover;
 	        background-size: cover;
 	background-repeat: no-repeat;
+	background-color: #f0d763;
+	text-align: center;
 }
 .page-container {
 	width: 100%;
@@ -50,46 +72,45 @@ a:active {
 .header {
 	padding: 2rem 0;
 }
-.header-title {
+.header__title {
 	font-size: 3rem;
 	text-align: center;
 }
-.header-title .fa {
-	display: none;
-}
-.header-subtitle {
+.header__subtitle {
 	display: block;
 	text-align: center;
 	padding: 1rem 0;
 }
-.header-lineBottom {
+.header__line-bottom {
 	border: none;
 	height: 1px;
 	margin: 0 auto;
 	background-image: -webkit-gradient(linear, left top, right top, from(rgba(0,0,0,0)), color-stop(#795548), to(rgba(0,0,0,0)));
 	background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), #795548, rgba(0,0,0,0));
+	background-image: -moz-linear-gradient(left, rgba(0,0,0,0), #795548, rgba(0,0,0,0));
 	background-image: -o-linear-gradient(left, rgba(0,0,0,0), #795548, rgba(0,0,0,0));
 	background-image: linear-gradient(90deg, rgba(0,0,0,0), #795548, rgba(0,0,0,0));
+	background-color: #795548;
 }
 .footer {
 	text-align: center;
 	padding: 2rem 0;
 	font-size: 0.875rem;
 }
-.Copyright {
+.copyright {
 	margin-bottom: 0;
 }
-.Social {
+.social {
 	display: inline-block;
 	width: 24px;
 	height: 24px;
 }
-.Social svg {
+.social svg {
 	fill: #795548;
 	-webkit-transition: 0.2s ease-in-out;
 	-o-transition: 0.2s ease-in-out;
 	transition: 0.2s ease-in-out;
 }
-.Social:hover svg {
+.social:hover svg {
 	fill: #9e7465;
 }
