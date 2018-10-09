@@ -1,0 +1,14 @@
+{
+  "name": "xfiveit",
+  "version": "1.0.0",
+  "main": "index.html",
+  "repository": "https://github.com/xfiveit/xfiveit.git",
+  "author": "xfiveit <xfiveit@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "concurrently \"browser-sync start --server --files 'index.html, css/*.css\" \"sass --watch src/scss:css\""
+  },
+  "dependencies": {
+    "concurrently": "^4.0.1"
+  }
+}
