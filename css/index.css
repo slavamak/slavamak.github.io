@@ -1,35 +1,43 @@
 div, section, header, main, footer, ul {
   -webkit-box-sizing: border-box;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+}
 
 @font-face {
-  font-family: 'Fira Mono';
+  font-family: "Fira Mono";
   src: local("Fira Mono"), url("../fonts/FiraMono-Regular.woff2") format("woff2"), url("../fonts/FiraMono-Regular.woff") format("woff"), url("../fonts/FiraMono-Regular.ttf") format("truetype");
   font-weight: normal;
-  font-style: normal; }
+  font-style: normal;
+}
 @font-face {
-  font-family: 'Fira Mono';
+  font-family: "Fira Mono";
   src: local("Fira Mono Bold"), url("../fonts/FiraMono-Bold.woff2") format("woff2"), url("../fonts/FiraMono-Bold.woff") format("woff"), url("../fonts/FiraMono-Bold.ttf") format("truetype");
   font-weight: bold;
-  font-style: normal; }
+  font-style: normal;
+}
 a {
-  text-decoration: none; }
+  text-decoration: none;
+}
 
 a:link {
-  color: #bb755b; }
+  color: #bb755b;
+}
 
 a:visited {
-  color: #3F51B5; }
+  color: #3F51B5;
+}
 
 a:hover {
-  text-decoration: underline; }
+  text-decoration: underline;
+}
 
 a:active {
-  color: #E91E63; }
+  color: #E91E63;
+}
 
 .page {
   font-size: 16px;
-  font-family: 'Fira Mono', 'Trebuchet MS', Tahoma, sans-serif;
+  font-family: "Fira Mono", "Trebuchet MS", Tahoma, sans-serif;
   color: #795548;
   margin: 0;
   padding: 0;
@@ -55,62 +63,86 @@ a:active {
   background-size: cover;
   background-repeat: no-repeat;
   background-color: #f0d763;
-  text-align: center; }
+  text-align: center;
+}
 
 .page-container {
-  width: 100%; }
+  width: 100%;
+  text-align: center;
+}
 
 .header {
-  padding: 2rem 0; }
+  padding: 2rem 0;
+}
 
 .header__title {
   font-size: 3rem;
-  text-align: center; }
+  text-align: center;
+}
 
 .header__subtitle {
   display: block;
   text-align: center;
-  padding: 1rem 0; }
+  padding: 1rem 0;
+}
 
 .header__line-bottom {
   border: none;
   height: 1px;
   margin: 0 auto;
-  background-image: -webkit-gradient(linear, left top, right top, from(transparent), color-stop(#795548), to(transparent));
-  background-image: -webkit-linear-gradient(left, transparent, #795548, transparent);
-  background-image: -moz-linear-gradient(left, transparent, #795548, transparent);
-  background-image: -o-linear-gradient(left, transparent, #795548, transparent);
-  background-image: linear-gradient(90deg, transparent, #795548, transparent); }
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0)), color-stop(#795548), to(rgba(0, 0, 0, 0)));
+  background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0), #795548, rgba(0, 0, 0, 0));
+  background-image: -moz-linear-gradient(left, rgba(0, 0, 0, 0), #795548, rgba(0, 0, 0, 0));
+  background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0), #795548, rgba(0, 0, 0, 0));
+  background-image: linear-gradient(90deg, rgba(0, 0, 0, 0), #795548, rgba(0, 0, 0, 0));
+}
 
 .footer {
   text-align: center;
   padding: 2rem 0;
-  font-size: 0.875rem; }
+  font-size: 0.875rem;
+}
 
 .copyright {
-  margin-bottom: 0; }
+  margin-bottom: 0;
+}
 
 .social {
   display: inline-block;
   width: 24px;
-  height: 24px; }
+  height: 24px;
+}
 
 .social svg {
   fill: #795548;
   -webkit-transition: 0.2s ease-in-out;
   -o-transition: 0.2s ease-in-out;
-  transition: 0.2s ease-in-out; }
+  transition: 0.2s ease-in-out;
+}
 
 .social:hover svg {
-  fill: #9e7465; }
+  fill: #9e7465;
+}
 
 /* Styles for Tablet and Desktop devices */
 @media screen and (min-width: 740px) {
   .page-container {
     max-width: 970px;
-    margin: 0 auto; } }
+    margin: 0 auto;
+  }
+}
 @media screen and (min-width: 406px) {
   .header {
-    padding: 2rem; } }
+    padding: 2rem;
+  }
+}
+.list {
+  list-style: none;
+  margin-left: 36px;
+  margin-right: 36px;
+}
+.list__item {
+  margin-bottom: 16px;
+}
 
 /*# sourceMappingURL=index.css.map */
