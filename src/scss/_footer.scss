@@ -1,0 +1,24 @@
+// MODULE FOOTER STYLES//
+
+.footer {
+	text-align: center;
+	padding: 2rem 0;
+	font-size: 0.875rem;
+}
+.copyright {
+	margin-bottom: 0;
+}
+.social {
+	display: inline-block;
+	width: 24px;
+	height: 24px;
+}
+.social svg {
+	fill: #795548;
+	-webkit-transition: 0.2s ease-in-out;
+	-o-transition: 0.2s ease-in-out;
+	transition: 0.2s ease-in-out;
+}
+.social:hover svg {
+	fill: #9e7465;
+}

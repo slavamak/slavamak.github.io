@@ -1,3 +1,4 @@
+@charset "UTF-8";
 div, section, header, main, footer, ul {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -95,6 +96,18 @@ a:active {
   background-image: -moz-linear-gradient(left, rgba(0, 0, 0, 0), #795548, rgba(0, 0, 0, 0));
   background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0), #795548, rgba(0, 0, 0, 0));
   background-image: linear-gradient(90deg, rgba(0, 0, 0, 0), #795548, rgba(0, 0, 0, 0));
+}
+
+.breadcrumbs {
+  list-style: none;
+  margin: 36px 0;
+  padding: 0;
+}
+.breadcrumbs__item {
+  display: inline-block;
+}
+.breadcrumbs__item + .breadcrumbs__item::before {
+  content: "/ ";
 }
 
 .footer {
