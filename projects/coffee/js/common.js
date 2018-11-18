@@ -1,1 +1,0 @@
-cssVars({});var userFeed=new Instafeed({get:"tagged",tagName:"coffee",accessToken:"5698265936.ba4c844.9da74f8cc4cb4d89bc695a2d734bcfc7",template:'<a class="about__instagram-img" href="{{link}}" target="_blank" id="{{id}}"><img src="{{image}}" /></a>',sortBy:"most-recent",limit:10,links:!1});userFeed.run();
