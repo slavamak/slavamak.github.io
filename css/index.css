@@ -116,8 +116,10 @@ a:active {
   font-size: 0.875rem;
 }
 
-.copyright {
-  margin-bottom: 0;
+.copyright, .resume-link {
+  display: block;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 .social {
