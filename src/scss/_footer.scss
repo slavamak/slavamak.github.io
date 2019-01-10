@@ -5,22 +5,22 @@
 	padding: 2rem 0;
 	font-size: 0.875rem;
 }
-.copyright, .resume-link {
+.footer__link {
 	display: block;
 	margin-top: 1rem;
 	margin-bottom: 1rem;
 }
-.social {
+.footer__social-icon {
 	display: inline-block;
 	width: 24px;
 	height: 24px;
 }
-.social svg {
+.footer__social-icon svg {
 	fill: #795548;
 	-webkit-transition: 0.2s ease-in-out;
 	-o-transition: 0.2s ease-in-out;
 	transition: 0.2s ease-in-out;
 }
-.social:hover svg {
+.footer__social-icon:hover svg {
 	fill: #9e7465;
 }
