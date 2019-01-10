@@ -1,0 +1,5 @@
+User-agent: *
+Sitemap: http://xfiveit.ru/sitemap.xml
+
+Disallow: /projects/
+Allow: /projects/cpskomi/
