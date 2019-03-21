@@ -5,7 +5,7 @@
 	"main": "index.html",
 	"author": "github.com/slavamak",
 	"license": "MIT",
-	"browserslist": "> 0.5% or last 3 versions",
+	"browserslist": "> 0.5%, last 3 versions",
 	"scripts": {
 		"dev": "gulp build",
 		"prod": "rimraf dist && cross-env NODE_ENV=production gulp prod",
