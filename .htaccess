@@ -1,5 +1,0 @@
-RewriteEngine on
-RewriteCond %{HTTP_HOST} !^xfiveit.ru$
-RewriteRule ^(.*) http://xfiveit.ru/$1 [R=301,L]
-RewriteCond %{HTTP:X-Forwarded-Proto} !https
-RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301,NE]

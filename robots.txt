@@ -1,7 +1,0 @@
-User-agent: *
-Sitemap: http://xfiveit.ru/sitemap.xml
-
-Disallow: /projects/coffee/
-Disallow: /projects/socialcops/
-Disallow: /projects/web-evol/
-Disallow: /projects/webim-test/

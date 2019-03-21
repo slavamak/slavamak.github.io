@@ -1,0 +1,14 @@
+@mixin title {
+	margin: 0;
+	line-height: 1.2;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+@mixin breakpoint-up($breakpoint) {
+	@if map-has-key($breakpoints, $breakpoint) {
+		@media (min-width: #{map-get($breakpoints, $breakpoint)}) {
+			@content;
+		}
+	}
+}

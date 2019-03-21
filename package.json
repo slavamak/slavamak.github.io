@@ -1,14 +1,59 @@
 {
-  "name": "xfiveit",
-  "version": "1.0.0",
-  "main": "index.html",
-  "repository": "https://github.com/xfiveit/xfiveit.git",
-  "author": "xfiveit <xfiveit@gmail.com>",
-  "license": "MIT",
-  "scripts": {
-    "start": "concurrently \"browser-sync start --server --files 'index.html, css/*.css\" \"sass --watch src/scss:css\""
-  },
-  "dependencies": {
-    "concurrently": "^4.0.1"
-  }
+	"name": "slavamak-website",
+	"version": "2.0.0",
+	"description": "My website",
+	"main": "index.html",
+	"author": "github.com/slavamak",
+	"license": "MIT",
+	"browserslist": "> 0.5% or last 3 versions",
+	"scripts": {
+		"dev": "gulp build",
+		"prod": "rimraf dist && cross-env NODE_ENV=production gulp prod",
+		"styles:lint": "stylelint \"source/styles/**/*.scss\" ",
+		"styles:format": "stylelint \"source/styles/**/*.scss\" --fix --config ./.stylelintrc-extend"
+	},
+	"devDependencies": {
+		"autoprefixer": "^9.3.1",
+		"browser-sync": "^2.26.3",
+		"cross-env": "^5.2.0",
+		"css-properties-sorting": "^1.0.10",
+		"gulp": "^4.0.0",
+		"gulp-csso": "^3.0.1",
+		"gulp-favicons": "^2.2.7",
+		"gulp-if": "^2.0.2",
+		"gulp-imagemin": "^5.0.3",
+		"gulp-js-import": "^1.0.6",
+		"gulp-postcss": "^8.0.0",
+		"gulp-pug": "^4.0.1",
+		"gulp-rename": "^1.4.0",
+		"gulp-sass": "^4.0.2",
+		"gulp-sourcemaps": "^2.6.4",
+		"gulp-svg-sprite": "^1.5.0",
+		"gulp-svgmin": "^2.1.0",
+		"gulp-uglify": "^3.0.1",
+		"gulp.spritesmith": "^6.9.0",
+		"husky": "^1.2.1",
+		"imagemin-pngquant": "^6.0.0",
+		"lint-staged": "^8.1.0",
+		"rimraf": "^2.6.3",
+		"stylelint": "^9.10.1",
+		"stylelint-order": "^1.0.0",
+		"stylelint-selector-no-empty": "^1.0.3"
+	},
+	"husky": {
+		"hooks": {
+			"pre-commit": "lint-staged"
+		}
+	},
+	"lint-staged": {
+		"linters": {
+			"*.scss": [
+				"stylelint --fix --config ./.stylelintrc-extend",
+				"git add"
+			]
+		}
+	},
+	"dependencies": {
+		"jquery": "^3.3.1"
+	}
 }
