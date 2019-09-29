@@ -4,8 +4,8 @@ const autoprefixer = require ('autoprefixer'),
 			favicons = require("gulp-favicons"),
 			gulp = require ('gulp'),
 			gulpif = require ('gulp-if'),
-			jsImport = require ('gulp-js-import'),
 			imagemin = require('gulp-imagemin'),
+			include = require('gulp-include'),
 			pngquant = require('imagemin-pngquant'),
 			postcss = require ('gulp-postcss'),
 			pug = require ('gulp-pug'),
@@ -88,7 +88,7 @@ gulp.task("images", () => {
 			imagemin.gifsicle({interlaced: true}),
 			imagemin.jpegtran({progressive: true}),
 			imagemin.optipng({optimizationLevel: 5}),
-			pngquant({quality: "70-75", speed: 7})
+			pngquant({quality: [0.7, 0.75], speed: 7})
 		]))
 		.pipe(gulp.dest(paths.images.dist))
 		.pipe(gulpif(!PRODUCTION, browserSync.stream()))
@@ -106,9 +106,8 @@ gulp.task('png-sprite', () => {
 
 gulp.task('scripts-vendor', () => {
 	return gulp.src(paths.scripts.src.vendor)
-		.pipe(jsImport({
-			hideConsole: true
-		}))
+		.pipe(include())
+			.on('error', console.log)
 		.pipe(gulpif(PRODUCTION, uglify()))
 		.pipe(gulp.dest(paths.scripts.dist))
 		.pipe(gulpif(!PRODUCTION, browserSync.stream()))
