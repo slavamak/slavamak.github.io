@@ -1,11 +1,17 @@
 /* HEADER STYLES */
 
 .header {
+	display: flex;
 	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
 	padding: $gutter;
+	justify-content: space-between;
 }
 .logo {
 	display: block;
-	width: 100px;
-	height: 100px;
+	font-size: 1.25rem;
+	font-style: normal;
+	font-weight: 900;
 }
