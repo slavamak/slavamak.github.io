@@ -64,13 +64,13 @@ gulp.task('favicons', () => {
 	return gulp.src(paths.images.src + 'favicons/*.*')
 		.pipe(favicons({
 			icons: {
-				android: false,
+				android: true,
 				appleIcon: true,
 				appleStartup: false,
 				coast: false,
 				favicons: true,
 				firefox: false,
-				windows: false,
+				windows: true,
 				yandex: false
 			}
 		}))
