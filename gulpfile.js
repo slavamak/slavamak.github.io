@@ -104,14 +104,14 @@ gulp.task('png-sprite', () => {
 		.pipe(gulp.dest(paths.images.src))
 });
 
-gulp.task('scripts-vendor', () => {
+/* gulp.task('scripts-vendor', () => {
 	return gulp.src(paths.scripts.src.vendor)
 		.pipe(include())
 			.on('error', console.log)
 		.pipe(gulpif(PRODUCTION, uglify()))
 		.pipe(gulp.dest(paths.scripts.dist))
 		.pipe(gulpif(!PRODUCTION, browserSync.stream()))
-});
+}); */
 
 gulp.task('scripts', () => {
 	return gulp.src(paths.scripts.src.common)
@@ -195,8 +195,8 @@ gulp.task('watch', () => {
 });
 
 
-gulp.task('build', gulp.series(gulp.parallel('views', 'styles', 'styles-vendor', 'scripts', 'scripts-vendor', 'images', 'favicons', 'fonts', 'assets'), gulp.parallel('serve', 'watch')));
+gulp.task('build', gulp.series(gulp.parallel('views', 'styles', 'styles-vendor', 'scripts', 'images', 'favicons', 'fonts', 'assets'), gulp.parallel('serve', 'watch')));
 
-gulp.task('prod', gulp.series(gulp.parallel('views', 'styles', 'styles-vendor', 'scripts', 'scripts-vendor', 'images', 'favicons', 'fonts', 'assets')));
+gulp.task('prod', gulp.series(gulp.parallel('views', 'styles', 'styles-vendor', 'scripts', 'images', 'favicons', 'fonts', 'assets')));
 
 gulp.task('default', gulp.series('build'));
