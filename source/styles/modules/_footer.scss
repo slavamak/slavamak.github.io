@@ -14,12 +14,19 @@
 }
 .socials__link {
 	display: inline-block;
-	width: 36px;
-	height: 36px;
+	width: 32px;
+	height: 32px;
 }
 .socials__link svg {
 	fill: $gray;
 }
 .socials__link svg:hover {
 	fill: $accent;
+}
+
+@include breakpoint-up(md) {
+	.socials__link {
+		width: 36px;
+		height: 36px;
+	}
 }

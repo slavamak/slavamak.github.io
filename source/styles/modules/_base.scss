@@ -39,6 +39,7 @@ html {
 	font-style: italic;
 	font-size: 16px;
 	color: $light;
+	background-color: $background;
 }
 .h1 {
 	@include title;
