@@ -1,5 +1,5 @@
 window.onload = function(){
-	getUnsplashPhoto();
+	//getUnsplashPhoto();
 };
 
 function getUnsplashPhoto () {

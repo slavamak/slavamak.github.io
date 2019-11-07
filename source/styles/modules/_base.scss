@@ -42,6 +42,7 @@ html {
 	background-color: $background;
 	background-size: cover;
 	background-position: center center;
+	background-image: linear-gradient(to left, rgba(27, 27, 27, 0.9), rgba(27, 27, 27, 0.8)), url("../images/bg.jpg")
 }
 .h1 {
 	@include title;
