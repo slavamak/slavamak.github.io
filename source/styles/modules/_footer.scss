@@ -17,12 +17,6 @@
 	width: 32px;
 	height: 32px;
 }
-.socials__link svg {
-	fill: $gray;
-}
-.socials__link svg:hover {
-	fill: $accent;
-}
 
 @include breakpoint-up(md) {
 	.socials__link {
