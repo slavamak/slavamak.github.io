@@ -1,0 +1,30 @@
+doctype html
+html(lang='en')
+	block variables
+	head
+		meta(charset='UTF-8')
+		meta(name='viewport', content='width=device-width, initial-scale=1.0')
+		meta(http-equiv='X-UA-Compatible', content='ie=edge')
+		meta(name='description', content=description)
+		title= title
+		link(rel='apple-touch-icon', sizes='180x180', href='/images/favicons/apple-touch-icon.png')
+		link(rel='icon', type='image/png', sizes='32x32', href='/images/favicons/favicon-32x32.png')
+		link(rel='icon', type='image/png', sizes='16x16', href='/images/favicons/favicon-16x16.png')
+		link(rel='manifest', href='/site.webmanifest')
+		meta(name='msapplication-config', content='browserconfig.xml')
+		meta(name='msapplication-TileColor', content='#ffffff')
+		meta(name='theme-color', content='#ffffff')
+		meta(name='apple-mobile-web-app-capable', content='yes')
+		link(rel='icon', type='image/x-icon', href='/images/favicons/favicon.ico')
+		// link(rel='stylesheet', href='styles/vendor.css')
+		link(rel='stylesheet', href='/styles/common.css')
+	body.page
+		block header
+			
+		block main
+			
+		block footer
+			include blocks/_footer.pug
+		block scripts
+			// script(src='scripts/vendor.js')
+			script(src='/scripts/common.js')

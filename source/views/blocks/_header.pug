@@ -1,0 +1,12 @@
+header.header
+	.container.header__container
+		block header
+		a.header__logo.link(href=href || '#')
+			img(src="../images/logo.png", alt="SlavaMak")
+			span SlavaMak
+		ul.header__nav
+			li.header__nav-item
+				a.link(href=works || 'works') Works
+		a.header__email.link(href='mailto:hello@slavamak.dev', title="Send me a message")
+			svg(width="32", height="32")
+				use(href="../images/sprite.svg#icon-email", xlink:href="../images/sprite.svg#icon-email")

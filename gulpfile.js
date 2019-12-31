@@ -10,7 +10,7 @@ const autoprefixer = require ('autoprefixer'),
 			postcss = require ('gulp-postcss'),
 			pug = require ('gulp-pug'),
 			rename = require ('gulp-rename'),
-			scss = require ('gulp-sass'),
+			stylus = require ('gulp-stylus'),
 			sourcemaps = require ('gulp-sourcemaps'),
 			pngSprite = require ('gulp.spritesmith'),
 			svgmin = require ('gulp-svgmin'),
@@ -22,15 +22,14 @@ const autoprefixer = require ('autoprefixer'),
 			paths = {
 				views: {
 					src: [
-						'./source/views/index.pug',
-						'./source/views/pages/*.pug'
+						'./source/views/**/!(_)*.pug'
 					],
 					dist: './dist/'
 				},
 				styles: {
 					src: {
-						common: './source/styles/global.scss',
-						vendor: './source/styles/vendor.scss'
+						common: './source/styles/main.styl',
+						vendor: './source/styles/vendor.styl'
 					},
 					dist: './dist/styles/'
 				},
@@ -64,13 +63,13 @@ gulp.task('favicons', () => {
 	return gulp.src(paths.images.src + 'favicons/*.*')
 		.pipe(favicons({
 			icons: {
-				android: true,
+				android: false,
 				appleIcon: true,
 				appleStartup: false,
 				coast: false,
 				favicons: true,
 				firefox: false,
-				windows: true,
+				windows: false,
 				yandex: false
 			}
 		}))
@@ -104,14 +103,14 @@ gulp.task('png-sprite', () => {
 		.pipe(gulp.dest(paths.images.src))
 });
 
-/* gulp.task('scripts-vendor', () => {
+gulp.task('scripts-vendor', () => {
 	return gulp.src(paths.scripts.src.vendor)
 		.pipe(include())
 			.on('error', console.log)
 		.pipe(gulpif(PRODUCTION, uglify()))
 		.pipe(gulp.dest(paths.scripts.dist))
 		.pipe(gulpif(!PRODUCTION, browserSync.stream()))
-}); */
+});
 
 gulp.task('scripts', () => {
 	return gulp.src(paths.scripts.src.common)
@@ -131,7 +130,7 @@ gulp.task('serve', () => {
 gulp.task('styles-vendor', () => {
 	return gulp.src(paths.styles.src.vendor)
 		.pipe(gulpif(!PRODUCTION, sourcemaps.init()))
-		.pipe(scss())
+		.pipe(stylus())
 		.pipe(gulpif(PRODUCTION, csso()))
 		.pipe(gulpif(!PRODUCTION, sourcemaps.write()))
 		.pipe(gulp.dest(paths.styles.dist))
@@ -141,10 +140,7 @@ gulp.task('styles-vendor', () => {
 gulp.task('styles', () => {
 	return gulp.src(paths.styles.src.common)
 		.pipe(gulpif(!PRODUCTION, sourcemaps.init()))
-		.pipe(scss({
-			indentType: 'tab',
-			indentWidth: 1,
-		}))
+		.pipe(stylus())
 		.pipe(postcss([
 			autoprefixer({
 				cascade: false
@@ -185,7 +181,7 @@ gulp.task('views', () => {
 
 gulp.task('watch', () => {
 	gulp.watch([
-		'./source/styles/**/*.scss',
+		'./source/styles/**/*.styl',
 		'!' + paths.styles.src.vendor
 	], gulp.series('styles'))
 	gulp.watch(paths.styles.src.vendor, gulp.series('styles-vendor'))
@@ -195,8 +191,8 @@ gulp.task('watch', () => {
 });
 
 
-gulp.task('build', gulp.series(gulp.parallel('views', 'styles', 'styles-vendor', 'scripts', 'images', 'favicons', 'fonts', 'assets'), gulp.parallel('serve', 'watch')));
+gulp.task('build', gulp.series(gulp.parallel('views', 'styles', 'styles-vendor', 'scripts', 'scripts-vendor', 'images', 'favicons', 'fonts', 'assets'), gulp.parallel('serve', 'watch')));
 
-gulp.task('prod', gulp.series(gulp.parallel('views', 'styles', 'styles-vendor', 'scripts', 'images', 'favicons', 'fonts', 'assets')));
+gulp.task('prod', gulp.series(gulp.parallel('views', 'styles', 'styles-vendor', 'scripts', 'scripts-vendor', 'images', 'favicons', 'fonts', 'assets')));
 
 gulp.task('default', gulp.series('build'));

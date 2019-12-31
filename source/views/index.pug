@@ -1,10 +1,12 @@
-extends layout.pug
+extends _layout.pug
 
 block variables
-	- var description = 'Personal website Wordpress developer from Saint-Petersburg | SlavaMak'
-	- var title = 'Wordpress developer | SlavaMak'
+	- var description = 'I develop custom plugins, themes, and integration APIs for small to medium-sized businesses and nonprofits. All this time, I not only create websites but also learn new technologies, so I can help you create a modern website that will meet your requirements.'
+	- var title = 'SlavaMak | Freelancer, web developer'
 
-prepend header
-	include blocks/header.pug
+block header
+	include blocks/_header.pug
+
 prepend main
-	include blocks/promo.pug
+	include blocks/_hero.pug
+	include blocks/_latest-works.pug
