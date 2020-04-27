@@ -1,60 +1,12 @@
 {
 	"name": "slavamak",
-	"version": "3.0.1",
+	"version": "4.0.0",
 	"description": "My website",
-	"main": "index.html",
-	"author": "github.com/slavamak",
+	"main": "index.js",
+	"author": "Slava Maksimov <hello@slavamak.dev> (https://slavamak.dev)",
 	"license": "MIT",
 	"browserslist": "> 0.5% or last 3 versions",
 	"scripts": {
-		"dev": "gulp build",
-		"prod": "rimraf dist && cross-env NODE_ENV=production gulp prod",
-		"styles:lint": "stylelint \"source/styles/**/*.styl\" --custom-syntax ./stylelint-styl.js",
-		"styles:format": "stylelint \"source/styles/**/*.styl\" --fix --config ./.stylelintrc-extend --custom-syntax ./stylelint-styl.js"
-	},
-	"devDependencies": {
-		"autoprefixer": "^9.6.1",
-		"browser-sync": "^2.26.7",
-		"cross-env": "^6.0.0",
-		"css-properties-sorting": "^1.0.10",
-		"gulp": "^4.0.2",
-		"gulp-csso": "^3.0.1",
-		"gulp-favicons": "^2.3.1",
-		"gulp-if": "^3.0.0",
-		"gulp-imagemin": "^6.1.0",
-		"gulp-include": "^2.4.1",
-		"gulp-postcss": "^8.0.0",
-		"gulp-pug": "^4.0.1",
-		"gulp-rename": "^1.4.0",
-		"gulp-sourcemaps": "^2.6.5",
-		"gulp-stylus": "^2.7.0",
-		"gulp-svg-sprite": "^1.5.0",
-		"gulp-svgmin": "^2.2.0",
-		"gulp-uglify": "^3.0.2",
-		"gulp.spritesmith": "^6.11.0",
-		"husky": "^3.0.7",
-		"imagemin-pngquant": "^8.0.0",
-		"lint-staged": "^9.4.0",
-		"postcss": "^7.0.18",
-		"postcss-styl": "^0.3.2",
-		"postcss-syntax": "^0.36.2",
-		"rimraf": "^3.0.0",
-		"stylelint": "^11.0.0",
-		"stylelint-order": "^3.1.1",
-		"stylelint-selector-no-empty": "^1.0.7"
-	},
-	"husky": {
-		"hooks": {
-			"pre-commit": "lint-staged"
-		}
-	},
-	"lint-staged": {
-		"*.styl": [
-			"stylelint --fix --config ./.stylelintrc-extend --custom-syntax ./stylelint-styl.js",
-			"git add"
-		]
-	},
-	"dependencies": {
-		"jquery": "^3.4.1"
+		"dev": ""
 	}
 }
