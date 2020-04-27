@@ -1,6 +1,6 @@
 {
 	"name": "slavamak",
-	"version": "4.0.0",
+	"version": "4.0.1-alpha",
 	"description": "My website",
 	"main": "index.js",
 	"author": "Slava Maksimov <hello@slavamak.dev> (https://slavamak.dev)",
