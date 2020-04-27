@@ -1,0 +1,15 @@
+.link {
+  color: inherit;
+  text-decoration: none;
+  -webkit-transition: 0.1s ease;
+  -o-transition: 0.1s ease;
+  transition: 0.1s ease;
+}
+
+.link:hover {
+  color: #ffd700;
+}
+
+.link:hover svg {
+  fill: #ffd700;
+}
