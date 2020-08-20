@@ -38,8 +38,8 @@ class Projects extends Component {
           <h2 className="h2 projects__heading">Latest projects</h2>
           <ul className="projects-list">
             {
-              list.map(({ title, url, description, technologies }) => (
-                <li className="projects-list__item">
+              list.map(({ title, url, description, technologies }, index) => (
+                <li className="projects-list__item" key={ index }>
                   <div className="projects-list__item-details">
                     <Link className="projects-list__item-title" url={ url } title={ title } target="_blank">
                       <h3 className="h3">{ title }</h3>
