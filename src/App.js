@@ -4,6 +4,8 @@ import './index.css';
 
 import Header from './components/Header/Header'
 import Hero from './components/Hero/Hero';
+import Projects from './components/Projects/Projects';
+import Footer from './components/Footer/Footer';
 
 function App() {
   return (
@@ -12,6 +14,8 @@ function App() {
 
       <main>
         <Hero />
+        <Projects />
+        <Footer />
       </main>
 
     </React.Fragment>

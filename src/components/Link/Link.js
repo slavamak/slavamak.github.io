@@ -1,11 +1,13 @@
 import React from 'react';
 
-import './link.css'
+import './link.css';
 
-function Link(props) {
+import classNames from 'classnames';
+
+function Link({ className, url, title, children, unLink, target = '_self' }) {
   return (
-    <a className={props.class ? props.class + " link" : "link"} href={props.url} title={props.title}>
-      {props.children}
+    <a className={ classNames({ link: !unLink }, { [className]: className }) } href={ url } title={ title } target={ target }>
+      { children }
     </a>
   )
 };

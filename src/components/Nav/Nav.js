@@ -2,20 +2,20 @@ import React from 'react';
 
 import Link from '../Link/Link';
 
-function NavItem(props) {
+function NavItem({ url, children }) {
   return (
     <li className="header__nav-item">
-      <Link url={props.url}>
-        {props.children}
+      <Link url={url}>
+        {children}
       </Link>
     </li>
   )
 };
 
-function Nav(props) {
+function Nav({ className, children }) {
   return (
-    <ul className={props.class}>
-      {props.children}
+    <ul className={className}>
+      {children}
     </ul>
   )
 };

@@ -4,23 +4,22 @@ import './header.css';
 
 import Link from '../Link/Link';
 import HeaderNav from './HeaderNav';
+import Icon from '../Icon/Icon';
 
 function Header() {
   return (
     <header className="header">
       <div className="container header__container">
 
-        <Link class="header__logo" url="/">
-          <img src="/images/logo.png" alt="SlavaMak"/>
+        <Link className="header__logo" url="/">
+          <img src="/images/logo.png" alt="Slava Maksimov"/>
           <span>SlavaMak</span>
         </Link>
 
         <HeaderNav />
 
-        <Link class="header__email" url="mailto:hello@slavamak.dev" title="Send me a message">
-          <svg width="32" height="32">
-            <use href="/images/sprite.svg#icon-email" xlinkHref="/images/sprite.svg#icon-email"/>
-          </svg>
+        <Link className="header__email" url="mailto:slavamak.dev@gmail.com" title="Send me a message">
+          <Icon name="email" />
         </Link>
 
       </div>

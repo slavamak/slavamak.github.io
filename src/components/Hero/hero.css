@@ -34,7 +34,8 @@
   text-align: center;
 }
 .hero-content__heading {
-  margin: 24.015009380863038px 0;
+  margin: 24px 0;
+  line-height: 1.2;
 }
 .hero-content__description {
   font-size: 1.1875rem;
@@ -48,6 +49,7 @@
   margin-top: 32px;
 }
 .hero-content__links-item {
+  display: inline-block;
   text-decoration: none;
   margin-right: 16px;
 }

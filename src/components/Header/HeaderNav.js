@@ -4,8 +4,8 @@ import {Nav, NavItem} from '../Nav/Nav';
 
 function HeaderNav() {
   return (
-    <Nav class="header__nav">
-      <NavItem url="/works">Works</NavItem>
+    <Nav className="header__nav">
+      <NavItem url="#projects">Projects</NavItem>
     </Nav>
   )
 };

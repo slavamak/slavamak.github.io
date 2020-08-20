@@ -1,9 +1,9 @@
 import React from 'react';
 
-function Icon(props) {
+function Icon({ name, width = 32, height = 32 }) {
   return (
-    <svg width="32" height="32">
-      <use href={"/images/sprite.svg#icon-" + props.name} xlinkHref={"/images/sprite.svg#icon-" + props.name} />
+    <svg width={ width } height={ height }>
+      <use href={"/images/sprite.svg#icon-" + name} xlinkHref={"/images/sprite.svg#icon-" + name} />
     </svg>
   )
 }

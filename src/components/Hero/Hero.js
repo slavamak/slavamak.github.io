@@ -11,7 +11,7 @@ function Hero() {
         <div className="hero-content">
           <p className="hero-content__greeting">Hello!</p>
           <h1 className="h1 hero-content__heading">I'm Slava Maksimov</h1>
-          <p className="hero-content__description">Freelancer, web developer. Website, landing page, online store or an individual solution based on Wordpress and Shopify.</p>
+          <p className="hero-content__description">Freelancer, web developer. Website, landing page, online store or an individual solution based on React and Shopify.</p>
 
           <HeroLinks />
 
