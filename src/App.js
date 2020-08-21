@@ -15,8 +15,9 @@ function App() {
       <main>
         <Hero />
         <Projects />
-        <Footer />
       </main>
+
+      <Footer />
 
     </React.Fragment>
   );
