@@ -7,7 +7,6 @@ import Header from './components/Header/Header'
 import Hero from './components/Hero/Hero';
 import Projects from './components/Projects/Projects';
 import Footer from './components/Footer/Footer';
-import ExternalRedirect from './components/ExternalRedirect/ExternalRedirect';
 
 function App() {
   return (
@@ -20,7 +19,6 @@ function App() {
         </main>
         <Footer />
       </Route>
-      <Route path='/digitalocean' render={() => (<ExternalRedirect to='https://m.do.co/c/13599454ff81' name='DigitalOcean' />)} />
       <Redirect to="/" />
     </Switch>
   );
