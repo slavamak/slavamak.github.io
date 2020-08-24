@@ -1,4 +1,6 @@
 import React from 'react';
+
+import Link from '../Link/Link';
 import Icon from '../Icon/Icon';
 
 import './footer.css';
@@ -8,9 +10,9 @@ function Footer() {
     <footer className="footer">
       <div className="container">
         <div className="footer-links">
-          <a className="link footer-links__item" href="digitalocean" target="_blank" rel="noopener noreferrer" title="DigitalOcean">
+          <Link className="footer-links__item" url="digitalocean" target="_blank" title="DigitalOcean">
             <Icon name="do" width="160" />
-          </a>
+          </Link>
         </div>
       </div>
     </footer>
