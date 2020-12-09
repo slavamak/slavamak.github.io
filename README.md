@@ -10,4 +10,4 @@ I'm an freelancer, web developer. #Javascript #Shopify.
 
 - [Telegram](https://t.me/slavamak_dev)
 - [Instagram](https://instagram.com/slavamak.dev)
-- [Email](slavamak.dev@gmail.com)
+- [Email](mailto:slavamak.dev@gmail.com)
