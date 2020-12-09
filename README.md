@@ -1,8 +1,6 @@
 ## Hi, there.
 
-I'm an freelancer, web developer.
-
-Website, landing page, online store or an individual solution based on React and Shopify.
+I'm an freelancer, web developer. #Javascript #Shopify.
 
 ### Websites
 
