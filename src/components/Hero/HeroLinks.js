@@ -23,11 +23,6 @@ const data = [
     name: 'telegram',
     url: 'https://t.me/slavamak_dev',
     title: 'Click to chat Telegram'
-  },
-  {
-    name: 'whatsapp',
-    url: 'https://wa.me/79043307244',
-    title: 'Click to chat WhatsApp'
   }
 ];
 
