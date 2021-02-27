@@ -1,6 +1,6 @@
 ## Hi, there!
 
-I'm an freelancer, web developer. #Javascript #Shopify.
+I'm a freelancer, web developer. #Javascript #Shopify.
 
 ### Websites
 
