@@ -1,8 +1,6 @@
 import React from 'react';
 import {Route, Switch, Redirect} from 'react-router-dom';
 
-import ExternalRedirect from './components/ExternalRedirect/ExternalRedirect';
-
 import './index.css';
 
 import Header from './components/Header/Header'
@@ -21,7 +19,6 @@ function App() {
         </main>
         <Footer />
       </Route>
-      <Route path="/digitalocean" render={() => <ExternalRedirect to="https://m.do.co/c/13599454ff81" name="DigitalOcean" />}/>
       <Redirect to="/" />
     </Switch>
   );
