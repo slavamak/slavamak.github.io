@@ -1,11 +1,13 @@
 {
-  "name": "web",
-  "version": "0.1.0",
-  "private": true,
+  "name": "slavamak",
+  "version": "5.0.0-beta",
+  "description": "My website",
+  "author": "Slava Maksimov <hello@slavamak.com> (https://slavamak.com)",
   "scripts": {
     "dev": "next dev",
-    "build": "next build && next export",
-    "start": "next start"
+    "build": "next build",
+    "start": "next start",
+    "export": "npm run build && next export"
   },
   "dependencies": {
     "classnames": "^2.2.6",
