@@ -1,30 +1,54 @@
+import { promises as fs } from 'fs'
+import path from 'path'
+
+import { GetStaticProps } from 'next'
+
 import Head from 'next/head'
 
-import Header from '../components/Header'
+import Layout from '../components/Layout'
 import Hero from '../components/Hero'
 import Projects from '../components/Projects'
-import Footer from '../components/Footer'
 
-export default function Home() {
+type Project = {
+  title: string,
+  url: string,
+  description: string,
+  technologies: string
+}
+
+type Link = {
+  name: string,
+  url: string,
+  title: string
+}
+
+export type HomeProps = {
+  projects: Project[],
+  links: Link[]
+}
+
+export default function Home(props: HomeProps) {
   return (
     <>
       <Head>
-        <meta charSet="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="theme-color" content="#000000" />
-        <meta name="description" content="I develop custom app, themes, and integration APIs for Shopify platform. All this time, I not only create websites but also learn new technologies, so I can help you create a modern website that will meet your requirements." />
         <title>Slava Maksimov | Freelancer, web developer</title>
-        <link rel="icon" href="/images/favicons/favicon.ico" />
-        <link rel="apple-touch-icon" href="/images/favicons/apple180.png" />
-        <link rel="manifest" href="/manifest.json" />
       </Head>
-
-      <Header />
-      <main>
-        <Hero />
-        <Projects />
-      </main>
-      <Footer />
+      <Layout>
+        <Hero {...props} />
+        <Projects {...props} />
+      </Layout>
     </>
   )
+}
+
+export const getStaticProps: GetStaticProps = async () => {
+  const filePath = path.join(process.cwd(), 'data.json')
+  const jsonData = await fs.readFile(filePath, 'utf-8')
+  const data = JSON.parse(jsonData)
+
+  return {
+    props: {
+      ...data
+    }
+  }
 }

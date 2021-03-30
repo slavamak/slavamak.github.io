@@ -4,7 +4,7 @@ import HeroLinks from './HeroLinks'
 
 import styles from './Hero.module.css'
 
-function Hero() {
+function Hero(props) {
   return (
     <section className={styles.hero}>
       <div className={classNames('container', styles.hero__container)}>
@@ -13,7 +13,7 @@ function Hero() {
           <h1 className={classNames('h1', styles['hero-content__heading'])}>I'm Slava Maksimov</h1>
           <p className={styles['hero-content__description']}>Freelancer, web developer. Website, landing page, online store or an individual solution based on React and Shopify.</p>
 
-          <HeroLinks />
+          <HeroLinks {...props} />
 
         </div>
         <div className={styles['hero-card']}>
