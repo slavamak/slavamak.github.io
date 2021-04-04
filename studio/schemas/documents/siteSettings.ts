@@ -14,6 +14,11 @@ export default {
       title: 'Description'
     },
     {
+      name: 'email',
+      type: 'string',
+      title: 'Email'
+    },
+    {
       name: 'logo',
       type: 'image',
       title: 'Logo',

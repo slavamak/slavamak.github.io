@@ -1,30 +1,38 @@
-// First, we must import the schema creator
 import createSchema from 'part:@sanity/base/schema-creator'
-
-// Then import schema types from any plugins that might expose them
 import schemaTypes from 'all:part:@sanity/base/schema-type'
 
-// document schemas
 import navMenu from './documents/navMenu'
 import siteSettings from './documents/siteSettings'
-import social from './objects/social'
-import link from './objects/link'
+import headerSettings from './documents/headerSettings'
+import footerSettings from './documents/footerSettings'
 import project from './documents/project'
+import redirect from './documents/redirect'
+import pageHome from './documents/pageHome'
 
-// Then we give our schema to the builder and provide the result to Sanity
+import hero from './modules/hero'
+import collection from './modules/collection'
+
+import socialLink from './objects/socialLink'
+import link from './objects/link'
+
 export default createSchema({
-  // We name our schema
   name: 'default',
-  // Then proceed to concatenate our document type
-  // to the ones provided by any plugins that are installed
   types: schemaTypes.concat([
     // Documents
     navMenu,
     siteSettings,
+    headerSettings,
+    footerSettings,
     project,
+    pageHome,
+    redirect,
 
     // Modules
-    social,
+    hero,
+    collection,
+
+    // Objects
+    socialLink,
     link
   ]),
 })

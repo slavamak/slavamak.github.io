@@ -3,8 +3,10 @@ import defaultResolve, {
   DiscardChangesAction
 } from 'part:@sanity/base/document-actions'
 
-const singletons = [
+export const singletons = [
   'siteSettings',
+  'headerSettings',
+  'footerSettings',
   'homePage'
 ]
 

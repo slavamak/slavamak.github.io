@@ -1,6 +1,9 @@
+import { AiOutlineMenu } from "react-icons/ai";
+
 export default {
   type: 'document',
   name: 'navigationMenu',
+  icon: AiOutlineMenu,
   fields: [
     {
       type: 'string',

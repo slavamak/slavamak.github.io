@@ -1,8 +1,10 @@
 import React from 'react'
+import { AiOutlineProject } from 'react-icons/ai'
 
 export default {
   type: 'document',
   name: 'project',
+  icon: AiOutlineProject,
   fields: [
     {
       type: 'string',
