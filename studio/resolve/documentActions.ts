@@ -1,13 +1,22 @@
-import defaultResolve from 'part:@sanity/base/document-actions'
+import defaultResolve, {
+  PublishAction,
+  DiscardChangesAction
+} from 'part:@sanity/base/document-actions'
+
+const singletons = [
+  'siteSettings',
+  'homePage'
+]
 
 export default function resolveDocumentActions(props) {
-  if (props.type !== 'siteSettings') {
-    return [...defaultResolve(props)]
-  }
+  const isSingle = singletons.includes(props.type)
 
-  const filteredDocumentActions = [...defaultResolve(props)].filter((action) => {
-    return (action.name !== 'DeleteAction' && action.name !== 'DuplicateAction')
-  })
+  if (isSingle) {
+    return [
+      PublishAction,
+      DiscardChangesAction
+    ]
+  }
   
-  return [...filteredDocumentActions]
+  return [...defaultResolve(props)]
 }
