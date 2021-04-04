@@ -32,7 +32,7 @@
     },
     { 
       "implements": "part:@sanity/base/document-actions/resolver", 
-      "path": "./resolveDocumentActions.ts" 
+      "path": "./resolve/documentActions.ts" 
     } 
   ]
 }

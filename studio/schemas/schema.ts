@@ -7,8 +7,8 @@ import schemaTypes from 'all:part:@sanity/base/schema-type'
 // document schemas
 import navMenu from './documents/navMenu'
 import siteSettings from './documents/siteSettings'
-import social from './modules/social'
-import link from './modules/link'
+import social from './objects/social'
+import link from './objects/link'
 import project from './documents/project'
 
 // Then we give our schema to the builder and provide the result to Sanity
