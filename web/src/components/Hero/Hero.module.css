@@ -1,0 +1,109 @@
+.hero {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  margin-top: 60px;
+  background-color: #ffd700;
+}
+@media (min-width: 576px) {
+  .hero {
+    margin-top: 90px;
+  }
+}
+.hero__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+@media (min-width: 576px) {
+  .hero__container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+}
+.hero-content {
+  width: 100%;
+  text-align: center;
+}
+.hero-content__heading {
+  margin: 24px 0;
+  line-height: 1.2;
+}
+.hero-content__description {
+  font-size: 1.1875rem;
+  line-height: 1.6;
+  color: #404040;
+}
+.hero-content__greeting {
+  font-size: 1.5rem;
+}
+.hero-content__links {
+  margin-top: 32px;
+}
+.hero-content__links-item {
+  display: inline-block;
+  text-decoration: none;
+  margin-right: 16px;
+}
+.hero-content__links-item:last-child {
+  margin-right: 0;
+}
+.hero-content__links-item:hover {
+  fill: rgba(0, 0, 0, 0.7);
+}
+@media (min-width: 576px) {
+  .hero-content {
+    width: 60%;
+    margin-right: 32px;
+    text-align: left;
+  }
+}
+@media (max-width: 576px) {
+  .hero-content {
+    -webkit-box-ordinal-group: 3;
+    -ms-flex-order: 2;
+    order: 2;
+    margin-top: 32px;
+  }
+}
+.hero-card {
+  width: 100%;
+  text-align: center;
+}
+@media (min-width: 576px) {
+  .hero-card {
+    width: 40%;
+  }
+}
+.hero-card__avatar-wrapper {
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+  max-width: 260px;
+  border-radius: 50%;
+  border: #222 solid 6px;
+  background-color: #fff;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.2) 5px 12px 8px;
+  box-shadow: rgba(0, 0, 0, 0.2) 5px 12px 8px;
+  padding-bottom: 100%;
+}
+.hero-card__avatar {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+@media (min-width: 576px) {
+  .hero-card__avatar-wrapper {
+    max-width: 100%;
+  }
+}
