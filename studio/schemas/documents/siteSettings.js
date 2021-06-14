@@ -19,6 +19,11 @@ export default {
       title: 'Email'
     },
     {
+      name: 'mailto_title',
+      type: 'string',
+      title: 'Mailto title'
+    },
+    {
       name: 'logo',
       type: 'image',
       title: 'Logo',

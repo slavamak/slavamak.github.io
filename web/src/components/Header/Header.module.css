@@ -57,12 +57,17 @@
 }
 
 .header__nav {
+  display: inline-flex;
   margin-left: auto;
-  margin-right: 32px;
   margin-bottom: -3px;
   color: #8c8c8c;
 }
 
+.header__nav li + li {
+  margin-left: 20px;
+}
+
 .header__email {
   font-size: 0;
+  margin-left: 32px;
 }

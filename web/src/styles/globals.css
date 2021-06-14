@@ -24,6 +24,9 @@ ol {
 svg:not(:root) {
   overflow: visible;
 }
+html {
+  scroll-behavior: smooth;
+}
 body,
 html {
   width: 100%;
@@ -33,7 +36,7 @@ html {
   margin: 0;
   padding: 0;
   line-height: 1.5;
-  font-family: Hind, 'Helvetica Nue', Helvetica, serif;
+  font-family: Hind, "Helvetica Nue", Helvetica, serif;
   font-size: 16px;
   color: #222;
 }
@@ -44,28 +47,31 @@ html {
   padding: 0 16px;
 }
 ::-moz-selection {
-  background-color: rgba(255,175,0,0.5);
+  background-color: rgba(255, 175, 0, 0.5);
 }
 ::selection {
-  background-color: rgba(255,175,0,0.5);
+  background-color: rgba(255, 175, 0, 0.5);
 }
 @font-face {
-  font-family: 'Hind';
-  src: url("/fonts/hind-v10-latin-500.woff2") format('woff2'), url("/fonts/hind-v10-latin-500.woff") format('woff');
+  font-family: "Hind";
+  src: url("/fonts/hind-v10-latin-500.woff2") format("woff2"),
+    url("/fonts/hind-v10-latin-500.woff") format("woff");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: 'Hind';
-  src: url("/fonts/hind-v10-latin-700.woff2") format('woff2'), url("/fonts/hind-v10-latin-700.woff") format('woff');
+  font-family: "Hind";
+  src: url("/fonts/hind-v10-latin-700.woff2") format("woff2"),
+    url("/fonts/hind-v10-latin-700.woff") format("woff");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: 'Hind';
-  src: url("/fonts/hind-v10-latin-regular.woff2") format('woff2'), url("/fonts/hind-v10-latin-regular.woff") format('woff');
+  font-family: "Hind";
+  src: url("/fonts/hind-v10-latin-regular.woff2") format("woff2"),
+    url("/fonts/hind-v10-latin-regular.woff") format("woff");
   font-weight: regular;
   font-style: normal;
   font-display: swap;
