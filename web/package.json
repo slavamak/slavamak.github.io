@@ -17,7 +17,7 @@
     "lint:scripts": "eslint \"src/**/*.{js,jsx}\" --fix",
     "lint:styles": "stylelint \"src/**/*.css\" --fix",
     "format": "prettier --write .",
-    "prepare": "cd .. && husky install && husky add .husky/pre-commit \"npx lint-staged\""
+    "prepare": "cd .. && husky install && husky add .husky/pre-commit \"npx lint-staged --config -\""
   },
   "dependencies": {
     "@sanity/block-content-to-react": "^3.0.0",
