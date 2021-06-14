@@ -76,11 +76,13 @@
 }
 .hero-card {
   width: 100%;
+  max-width: 260px;
   text-align: center;
 }
 @media (min-width: 576px) {
   .hero-card {
     width: 40%;
+    max-width: none;
   }
 }
 .hero-card__avatar-wrapper {
@@ -88,7 +90,6 @@
   display: flex;
   overflow: hidden;
   width: 100%;
-  max-width: 260px;
   border-radius: 50%;
   border: #222 solid 6px;
   background-color: #fff;
@@ -101,9 +102,4 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-}
-@media (min-width: 576px) {
-  .hero-card__avatar-wrapper {
-    max-width: 100%;
-  }
 }
