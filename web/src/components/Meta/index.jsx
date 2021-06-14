@@ -11,6 +11,7 @@ const Meta = ({ meta }) => {
       <title>{title}</title>
       <meta name="description" content={description} />
       <link rel="apple-touch-icon" href="/images/favicons/apple180.png" />
+      <link rel="icon" href="/images/favicons/favicon.ico" />
       <link rel="manifest" href="/manifest.json" />
     </Head>
   )

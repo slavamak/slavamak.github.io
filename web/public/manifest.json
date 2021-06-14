@@ -1,6 +1,6 @@
 {
   "short_name": "slavamak",
-  "name": "My website",
+  "name": "Slava Maksimov",
   "icons": [
     {
       "src": "images/favicons/favicon.ico",
@@ -11,11 +11,6 @@
       "src": "images/favicons/apple180.png",
       "type": "image/png",
       "sizes": "180x180"
-    },
-    {
-      "src": "images/logo.png",
-      "type": "image/png",
-      "sizes": "512x512"
     }
   ],
   "start_url": ".",
