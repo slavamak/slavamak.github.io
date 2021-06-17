@@ -1,42 +1,39 @@
-import { AiOutlineUnorderedList } from 'react-icons/ai'
+import { AiOutlineUnorderedList } from "react-icons/ai"
 
 export default {
-  title: 'Collection',
-  name: 'collection',
+  title: "Collection",
+  name: "collection",
   icon: AiOutlineUnorderedList,
-  type: 'object',
+  type: "object",
   fields: [
     {
-      name: 'title',
-      type: 'string',
-      title: 'Title'
+      name: "title",
+      type: "string",
+      title: "Title",
     },
     {
-      name: 'items',
-      type: 'array',
-      title: 'Collection Items',
+      name: "items",
+      type: "array",
+      title: "Collection Items",
       of: [
         {
-          type: 'reference',
-          to: [
-            {type: 'project'}
-          ]
-        }
-      ]
-    }
+          type: "reference",
+          to: [{ type: "project" }],
+        },
+      ],
+    },
   ],
   preview: {
     select: {
-      title: 'title',
-      count: 'items'
+      title: "title",
+      count: "items",
     },
     prepare({ title, count }) {
-
       return {
         title,
         subtitle: count && `Total: ${count.length}`,
-        media: AiOutlineUnorderedList
+        media: AiOutlineUnorderedList,
       }
-    }
-  }
+    },
+  },
 }

@@ -1,39 +1,39 @@
 export default {
-  name: 'siteSettings',
-  type: 'document',
-  title: 'Site Settings',
+  name: "siteSettings",
+  type: "document",
+  title: "Site Settings",
   fields: [
     {
-      name: 'title',
-      type: 'string',
-      title: 'Title'
+      name: "title",
+      type: "string",
+      title: "Title",
     },
     {
-      name: 'description',
-      type: 'text',
-      title: 'Description'
+      name: "description",
+      type: "text",
+      title: "Description",
     },
     {
-      name: 'email',
-      type: 'string',
-      title: 'Email'
+      name: "email",
+      type: "string",
+      title: "Email",
     },
     {
-      name: 'mailto_title',
-      type: 'string',
-      title: 'Mailto title'
+      name: "mailto_title",
+      type: "string",
+      title: "Mailto title",
     },
     {
-      name: 'logo',
-      type: 'image',
-      title: 'Logo',
+      name: "logo",
+      type: "image",
+      title: "Logo",
       fields: [
         {
-          name: 'logo_alt',
-          type: 'string',
-          title: 'Logo alternate text'
-        }
-      ]
-    }
-  ]
+          name: "logo_alt",
+          type: "string",
+          title: "Logo alternate text",
+        },
+      ],
+    },
+  ],
 }

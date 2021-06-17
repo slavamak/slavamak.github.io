@@ -1,14 +1,14 @@
 export default {
-  type: 'object',
-  name: 'link',
+  type: "object",
+  name: "link",
   fields: [
     {
-      type: 'string',
-      name: 'title'
+      type: "string",
+      name: "title",
     },
     {
-      type: 'string',
-      name: 'url'
-    }
-  ]
+      type: "string",
+      name: "url",
+    },
+  ],
 }

@@ -11,10 +11,10 @@
  * See docs:https://www.sanity.io/docs/http-api/http-mutations#deleting-multiple-documents-by-query
  */
 
-import sanityClient from 'part:@sanity/base/client'
+import sanityClient from "part:@sanity/base/client"
 
-const client = sanityClient.withConfig({apiVersion: '2021-05-30'})
+const client = sanityClient.withConfig({ apiVersion: "2021-05-30" })
 client
-  .delete({query: '*[_type == "siteSettings"][0...2]'})
+  .delete({ query: '*[_type == "siteSettings"][0...2]' })
   .then(console.log)
   .catch(console.error)

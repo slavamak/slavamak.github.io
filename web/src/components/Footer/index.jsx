@@ -2,8 +2,8 @@ import Icon from "../Icon"
 import Link from "../Link"
 import styles from "./Footer.module.css"
 
-function Footer({data}) {
-  const {referral} = data
+function Footer({ data }) {
+  const { referral } = data
 
   return (
     <footer className={styles.footer}>
@@ -11,7 +11,7 @@ function Footer({data}) {
         <div className={styles["footer-links"]}>
           <Link
             className={styles["footer-links__item"]}
-            url={referral}
+            href={referral}
             target="_blank"
             title="DigitalOcean"
           >

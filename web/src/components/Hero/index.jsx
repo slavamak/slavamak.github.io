@@ -6,11 +6,17 @@ import styles from "./Hero.module.css"
 import HeroLinks from "./HeroLinks"
 
 function Hero({ data }) {
-  const { photo, photo: {photo_alt: photoAlt}, social_links: links, content } = data
+  const {
+    photo,
+    photo: { photo_alt: photoAlt },
+    social_links: links,
+    content,
+  } = data
   const photoURl = urlForImage(photo).url()
 
   const overrides = {
     h1: (props) => (
+      // eslint-disable-next-line jsx-a11y/heading-has-content
       <h1
         className={classNames("h1", styles["hero-content__heading"])}
         {...props}

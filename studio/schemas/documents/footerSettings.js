@@ -1,19 +1,19 @@
 export default {
-  title: 'Footer Settings',
-  name: 'footerSettings',
-  type: 'document',
+  title: "Footer Settings",
+  name: "footerSettings",
+  type: "document",
   fields: [
     {
-      title: 'Referral link',
-      name: 'referral',
-      type: 'string'
-    }
+      title: "Referral link",
+      name: "referral",
+      type: "string",
+    },
   ],
   preview: {
     prepare() {
       return {
-        title: 'Footer Settings'
+        title: "Footer Settings",
       }
-    }
-  }
+    },
+  },
 }

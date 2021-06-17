@@ -3,7 +3,7 @@ import Link from "../Link"
 function NavItem({ url, children }) {
   return (
     <li>
-      <Link url={url}>{children}</Link>
+      <Link href={url}>{children}</Link>
     </li>
   )
 }

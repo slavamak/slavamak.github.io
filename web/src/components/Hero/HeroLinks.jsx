@@ -6,11 +6,17 @@ function HeroLinks({ links }) {
   return (
     <div className={styles["hero-content__links"]}>
       {links.map((link) => (
-          <Link key={ link._key } url={ link.url } title={ link.title } target="_blank" className={styles['hero-content__links-item']} unLink>
-            <Icon name={ link.icon } />
-          </Link>
-        )
-      )}
+        <Link
+          key={link._key}
+          href={link.url}
+          title={link.title}
+          target="_blank"
+          className={styles["hero-content__links-item"]}
+          unLink
+        >
+          <Icon name={link.icon} />
+        </Link>
+      ))}
     </div>
   )
 }
