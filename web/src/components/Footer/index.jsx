@@ -1,5 +1,6 @@
 import Icon from "../Icon"
 import Link from "../Link"
+import NowPlaying from "../NowPlaying"
 import styles from "./Footer.module.css"
 
 function Footer({ data }) {
@@ -8,6 +9,8 @@ function Footer({ data }) {
   return (
     <footer className={styles.footer}>
       <div className="container">
+        <NowPlaying />
+
         <div className={styles["footer-links"]}>
           <Link
             className={styles["footer-links__item"]}
