@@ -1,7 +1,7 @@
 import dynamic from "next/dynamic"
 
-const Projects = dynamic(() => import("../Projects"))
-const Hero = dynamic(() => import("../Hero"))
+const Projects = dynamic(() => import("./Projects"))
+const Hero = dynamic(() => import("./Hero"))
 
 const Module = ({ module }) => {
   const type = module._type

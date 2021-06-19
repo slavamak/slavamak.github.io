@@ -28,6 +28,7 @@
 
   html {
     font-size: 62.5%;
+    scroll-behavior: smooth;
   }
 
   html,
@@ -38,7 +39,7 @@
   }
 
   body {
-    @apply font-body leading-none bg-white text-black text-base;
+    @apply font-body leading-none bg-white text-black text-base dark:bg-gray-900 dark:text-white;
   }
 
   p {
@@ -121,10 +122,10 @@
   }
 
   ::-moz-selection {
-    @apply text-white bg-black;
+    @apply bg-yellow-100 dark:text-black dark:bg-white;
   }
 
   ::selection {
-    @apply text-white bg-black;
+    @apply bg-yellow-100 dark:text-black dark:bg-white;
   }
 }

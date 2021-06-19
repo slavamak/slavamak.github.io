@@ -1,4 +1,5 @@
 import classNames from "classnames"
+import NextLink from "next/link"
 
 import styles from "./Link.module.css"
 
@@ -7,17 +8,18 @@ function Link({ className, href, title, children, unLink, target }) {
     target === "_blank" ? { target, rel: "noopener noreferrer" } : null
 
   return (
-    <a
-      className={classNames(
-        { [styles.link]: !unLink },
-        { [className]: className }
-      )}
-      href={href}
-      title={title}
-      {...props}
-    >
-      {children}
-    </a>
+    <NextLink href={href}>
+      <a
+        className={classNames(
+          { [styles.link]: !unLink },
+          { [className]: className }
+        )}
+        title={title}
+        {...props}
+      >
+        {children}
+      </a>
+    </NextLink>
   )
 }
 

@@ -1,3 +1,5 @@
+const colors = require("tailwindcss/colors")
+
 module.exports = {
   corePlugins: {
     preflight: false,
@@ -11,6 +13,15 @@ module.exports = {
   },
   darkMode: "class",
   theme: {
+    colors: {
+      transparent: "transparent",
+      current: "currentColor",
+      inherit: "inherit",
+      black: colors.black,
+      white: colors.white,
+      gray: colors.trueGray,
+      yellow: colors.amber,
+    },
     screens: {
       xs: "480px",
       sm: "768px",
@@ -33,7 +44,7 @@ module.exports = {
       sm: "1.2rem",
       tiny: "1.4rem",
       base: "1.6rem",
-      lg: "2rem",
+      lg: "1.8rem",
       xl: "2.4rem",
       "2xl": "3rem",
       "3xl": "3.2rem",
@@ -51,6 +62,12 @@ module.exports = {
       },
       lineHeight: {
         inherit: "inherit",
+      },
+      padding: {
+        full: "100%",
+      },
+      transitionProperty: {
+        height: "height",
       },
     },
   },

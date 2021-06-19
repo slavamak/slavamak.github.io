@@ -1,6 +1,6 @@
-import Footer from "../Footer"
-import Header from "../Header"
-import Meta from "../Meta"
+import Footer from "./Footer"
+import Header from "./Header"
+import Meta from "./Meta"
 
 function Layout({ site, children }) {
   return (
