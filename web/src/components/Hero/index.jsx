@@ -1,26 +1,26 @@
 import BlockContent from "@sanity/block-content-to-react"
-import classNames from "classnames"
+import Image from "next/image"
 
 import { urlForImage } from "../../libs/sanity"
-import styles from "./Hero.module.css"
 import HeroLinks from "./HeroLinks"
 
 function Hero({ data }) {
-  const { photo, photo: {photo_alt: photoAlt}, social_links: links, content } = data
+  const {
+    photo,
+    photo: { photo_alt: photoAlt },
+    social_links: links,
+    content,
+  } = data
   const photoURl = urlForImage(photo).url()
 
   const overrides = {
     h1: (props) => (
-      <h1
-        className={classNames("h1", styles["hero-content__heading"])}
-        {...props}
-      />
+      // eslint-disable-next-line jsx-a11y/heading-has-content
+      <h1 className="h1 my-8" {...props} />
     ),
-    subTitle: (props) => (
-      <p className={styles["hero-content__greeting"]} {...props} />
-    ),
+    subTitle: (props) => <p className="text-xl" {...props} />,
     normal: (props) => (
-      <p className={styles["hero-content__description"]} {...props} />
+      <p className="text-lg text-gray-800 dark:text-gray-300" {...props} />
     ),
   }
 
@@ -34,18 +34,19 @@ function Hero({ data }) {
   }
 
   return (
-    <section className={styles.hero}>
-      <div className={classNames("container", styles.hero__container)}>
-        <div className={styles["hero-content"]}>
+    <section className="bg-yellow-400 py-24 mt-24 sm:mt-36 dark:bg-gray-800">
+      <div className="flex flex-col items-center max-w-screen-sm mx-auto px-8 sm:flex-row">
+        <div className="w-full text-center sm:w-3/5 sm:text-left sm-down:mt-12 sm-down:order-2 sm:mr-12">
           <BlockContent blocks={content} serializers={serializers} />
           <HeroLinks links={links} />
         </div>
-        <div className={styles["hero-card"]}>
-          <div className={styles["hero-card__avatar-wrapper"]}>
-            <img
-              className={styles["hero-card__avatar"]}
+        <div className="text-center w-full max-w-md sm:max-w-none sm:w-2/5">
+          <div className="relative flex overflow-hidden w-full rounded-full border-4 border-gray-900 bg-white pb-full shadow-xl dark:border-gray-100">
+            <Image
               src={photoURl}
               alt={photoAlt}
+              objectFit="cover"
+              layout="fill"
             />
           </div>
         </div>

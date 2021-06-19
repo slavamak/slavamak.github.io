@@ -16,9 +16,7 @@
   ],
   "env": {
     "development": {
-      "plugins": [
-        "@sanity/vision"
-      ]
+      "plugins": ["@sanity/vision"]
     }
   },
   "parts": [
@@ -34,9 +32,9 @@
       "name": "part:@sanity/base/new-document-structure",
       "path": "./structure/documentStructure"
     },
-    { 
-      "implements": "part:@sanity/base/document-actions/resolver", 
-      "path": "./resolve/documentActions" 
+    {
+      "implements": "part:@sanity/base/document-actions/resolver",
+      "path": "./resolve/documentActions"
     }
   ]
 }

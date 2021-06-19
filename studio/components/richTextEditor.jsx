@@ -1,5 +1,6 @@
-import React from 'react'
+import React from "react"
 
-export const SubTitleStyle = props => (
-  <span style={{fontSize: '1.5em'}}>{props.children}</span>
+// eslint-disable-next-line import/prefer-default-export
+export const SubTitleStyle = ({ children }) => (
+  <span style={{ fontSize: "1.5em" }}>{children}</span>
 )

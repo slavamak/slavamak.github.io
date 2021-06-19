@@ -1,9 +1,9 @@
-import Link from "../Link"
+import Link from "./Link"
 
-function NavItem({ url, children }) {
+function NavItem({ className, url, children }) {
   return (
-    <li>
-      <Link url={url}>{children}</Link>
+    <li className={className}>
+      <Link href={url}>{children}</Link>
     </li>
   )
 }

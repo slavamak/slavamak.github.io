@@ -20,11 +20,18 @@ module.exports = {
   plugins: ["react", "prettier", "simple-import-sort"],
   extends: ["airbnb", "airbnb/hooks", "prettier"],
   rules: {
+    "import/no-unresolved": [2, { ignore: ["^(all|part):"] }],
     "no-underscore-dangle": "off",
     "prettier/prettier": "error",
-    "react/jsx-props-no-spreading": {
-      html: "ignore",
-    },
+    "react/jsx-props-no-spreading": [
+      "error",
+      {
+        html: "ignore",
+        custom: "enforce",
+        explicitSpread: "enforce",
+        exceptions: [""],
+      },
+    ],
     "react/prop-types": "off",
     "react/react-in-jsx-scope": "off",
     "simple-import-sort/imports": "error",

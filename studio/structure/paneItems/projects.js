@@ -1,12 +1,14 @@
-import { AiOutlineProject } from 'react-icons/ai'
-import S from '@sanity/desk-tool/structure-builder'
+import S from "@sanity/desk-tool/structure-builder"
+import { AiOutlineProject } from "react-icons/ai"
 
-export const Projects = S.listItem()
-  .title('Projects')
+const Projects = S.listItem()
+  .title("Projects")
   .icon(AiOutlineProject)
   .child(
-    S.documentTypeList('project')
-      .title('Projects')
-      .filter('_type == $type')
-      .params({ type: 'project' })
+    S.documentTypeList("project")
+      .title("Projects")
+      .filter("_type == $type")
+      .params({ type: "project" })
   )
+
+export default Projects

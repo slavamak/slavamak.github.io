@@ -1,33 +1,33 @@
-import React from 'react'
-import { AiOutlineProject } from 'react-icons/ai'
+import React from "react"
+import { AiOutlineProject } from "react-icons/ai"
 
 export default {
-  type: 'document',
-  name: 'project',
+  type: "document",
+  name: "project",
   icon: AiOutlineProject,
   fields: [
     {
-      type: 'string',
-      name: 'title'
+      type: "string",
+      name: "title",
     },
     {
-      type: 'url',
-      name: 'url'
+      type: "url",
+      name: "url",
     },
     {
-      type: 'text',
-      name: 'description'
+      type: "text",
+      name: "description",
     },
     {
-      type: 'array',
-      name: 'technologies',
-      of: [{ type: 'string' }]
-    }
+      type: "array",
+      name: "technologies",
+      of: [{ type: "string" }],
+    },
   ],
   preview: {
     select: {
-      title: 'title',
-      url: 'url'
+      title: "title",
+      url: "url",
     },
     prepare({ url, title }) {
       const favicon = `https://s2.googleusercontent.com/s2/favicons?domain=${url}`
@@ -35,8 +35,8 @@ export default {
       return {
         title,
         subtitle: url,
-        media: <img src={favicon} alt={title} />
+        media: <img src={favicon} alt={title} />,
       }
-    }
-  }
+    },
+  },
 }
